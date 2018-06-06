@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style:none;
+}
+
+body{
+	/* background: #19B5FE !important; */
+	background-image: url('../../images/wallup.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.ctr{
+	text-align: center !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.panel, .table, .btn, .form-control, #sidebar {
+		border-radius: 2.5px !important;
+}
+
+#box-login{
+	text-align: center !important;
+	margin-top: 15%;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+#box-login .panel-heading{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#box-login input[type=submit]{
+	background: #22A7F0 !important;
+	color: #fff !important;
+}
+
+#box-login input[type=submit]:hover{
+	background: rgba(52, 129, 219, 0.83) !important;
+}
+
+#box-login .panel-heading,#box-login .panel-footer{
+	background: #22A7F0 !important;
+	color: #fff !important;
+}
+
+.navbar-default{
+	background: #337ab7 !important;
+	color: #fff !important;
+	margin-bottom: 0px !important;
+	border: none !important;
+}
+
+.navbar-header > .navbar-brand{
+	color: #fff !important;
+	text-shadow: 0px 1px 9px #000;
+}
+.navbar-second{
+	background: #fff !important;
+	box-shadow: 0px 0px 5px #999;
+}
+
+#content{
+	margin-top: 120px;
+	margin-bottom: 30px !important;
+	padding-bottom: 50px !important;
+}
+
+.scroll{
+		width: 100%;
+		overflow: scroll;
+		height: auto;
+
+		/*script tambahan khusus untuk IE */
+		scrollbar-face-color: #CE7E00;
+		scrollbar-shadow-color: #FFFFFF;
+		scrollbar-highlight-color: #6F4709;
+		scrollbar-3dlight-color: #11111;
+		scrollbar-darkshadow-color: #6F4709;
+		scrollbar-track-color: #FFE8C1;
+		scrollbar-arrow-color: #6F4709;
+}
+
+.btn-group > .btn:first{
+	border-top-right-radius: 0px !important;
+}
+
+.tab-content{
+	padding: 10px;
+	border:0.5px solid #ddd;
+	border-top:0px !important;
+}
+
+.tab-content > div{
+
+	padding: 10px 20px 0px 20px;
+}
+
+.dropdown-menu > li > a:hover{
+	background:#337ab7 !important;
+}
+
+.graphic  .panel > .panel-heading{
+	font-size: 15px !important; 
+}

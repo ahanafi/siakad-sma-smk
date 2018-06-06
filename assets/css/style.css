@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style:none;
+	font-family: "Roboto Slab";
+}
+
+body{
+	background-attachment: fixed !important;
+}
+
+.ctr{
+	text-align: center !important;
+}
+
+nav{
+	border-radius: 0px !important;
+}
+
+.navbar-brand{
+	font-weight: bold !important;
+}
+
+.panel, .table, .btn, .form-control, #sidebar {
+		border-radius: 2.5px !important;
+}
+
+thead{
+	background: #428bca;
+	color: #fff;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-moz-inner-spin-button,
+input[type=number]::-moz-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	margin: 0;
+} {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.pagination > .active{
+	background: black !important;
+}
+
+.pagination > .active > a{
+	color: #fff !important;
+}
+
+footer{
+	position: fixed;
+	width: 100% !important;
+	margin-top: 20px;
+	background: #eee;
+	padding: 13px;
+	font-size: 16px;
+	line-height: 16px;
+	bottom: 0 !important;
+}
+
+#content .panel-heading{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#main-content{
+	margin-top: 80px;
+}
+
+textarea{
+	resize: none;
+}

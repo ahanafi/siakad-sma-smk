@@ -1,0 +1,8 @@
+Options -Indexes
+
+ErrorDocument 404 /siakad/templates/error404.php
+ErrorDocument 403 /siakad/templates/error404.php
+
+RewriteEngine On
+RewriteRule ^absen-masuk$ index.php
+RewriteRule ^absen-pulang$ pulang.php

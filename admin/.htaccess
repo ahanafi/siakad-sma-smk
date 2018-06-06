@@ -1,0 +1,105 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^dashboard$ index.php
+RewriteRule ^login$ login.php
+RewriteRule ^logout$ logout.php
+
+#jadwal
+
+RewriteRule ^jadwal$ index.php?page=jadwal
+RewriteRule ^tambah-jadwal$ index.php?page=tambah-jadwal
+RewriteRule ^delete-jadwal/([0-9]+)$ index.php?page=hapus-jadwal&id=$1
+RewriteRule ^edit-jadwal/([0-9]+)$ index.php?page=edit-jadwal&id=$1
+
+#export
+RewriteRule ^export-guru-pdf$ export-guru.php [L]
+RewriteRule ^export-kelas-pdf$ export-kelas.php [L]
+RewriteRule ^export-mapel-pdf$ export-mapel.php [L]
+RewriteRule ^export-kelas/(.*)$ export-per-kelas.php?kelas=$1 [L]
+
+#guru
+
+RewriteRule ^guru$ index.php?page=guru
+RewriteRule ^edit-guru/([0-9]+)$ index.php?page=edit-guru&id=$1
+RewriteRule ^ubah-foto/([0-9]+)$ index.php?page=ubah-foto&id=$1
+RewriteRule ^delete-guru/([0-9]+)$ index.php?page=delete-guru&id=$1
+RewriteRule ^tambah-guru$ index.php?page=tambah-guru
+
+#siswa
+
+RewriteRule ^siswa$ index.php?page=siswa
+RewriteRule ^tambah-siswa$ index.php?page=tambah-siswa
+RewriteRule ^detail-siswa/([0-9]+)$ index.php?page=detail-siswa&id=$1
+RewriteRule ^delete-siswa/([0-9]+)$ index.php?page=hapus-siswa&id=$1
+RewriteRule ^edit-siswa/([0-9]+)$ index.php?page=edit-siswa&id=$1
+
+#nilai
+
+RewriteRule ^nilai$ index.php?page=nilai
+RewriteRule ^nilai-harian$ index.php?page=nilai&nilai=harian
+RewriteRule ^nilai-uts$ index.php?page=nilai&nilai=uts
+RewriteRule ^nilai-uas$ index.php?page=nilai&nilai=uas
+RewriteRule ^entry-nilai$ index.php?page=entry-nilai
+RewriteRule ^entry-rapot$ index.php?page=entry-nilai-rapot
+RewriteRule ^result-nilai$ index.php?page=hasil-nilai
+
+#mapel
+
+RewriteRule ^mata-pelajaran$ index.php?page=mata-pelajaran
+RewriteRule ^tambah-mata-pelajaran$ index.php?page=tambah-mata-pelajaran
+RewriteRule ^edit-mapel/([0-9]+)$ index.php?page=edit-mata-pelajaran&id=$1
+RewriteRule ^delete-mapel/([0-9]+)$ index.php?page=delete-mapel&id=$1
+
+#deskripsi
+
+RewriteRule ^data-deskripsi$ index.php?page=deskripsi&data=
+RewriteRule ^deskripsi/(.*)$ index.php?page=deskripsi&data=$1 [L]
+RewriteRule ^edit-deskripsi/(.*)/(.*) index.php?page=edit-deskripsi&kode=$1&q=$2
+
+#KKM
+
+RewriteRule ^data-kkm$ index.php?page=data-kkm
+RewriteRule ^edit-kkm/(.*)$ index.php?page=edit-kkm&kode=$1
+
+#kelas
+
+RewriteRule ^kelas$ index.php?page=kelas
+RewriteRule ^tambah-kelas$ index.php?page=tambah-kelas
+RewriteRule ^detail-kelas/([0-9]+)$ index.php?page=detail-kelas&id=$1
+RewriteRule ^delete-kelas/([0-9]+)$ index.php?page=hapus-kelas&id=$1
+RewriteRule ^edit-kelas/([0-9]+)$ index.php?page=edit-kelas&id=$1
+
+#absensiharian
+
+RewriteRule ^absensi-harian$ index.php?page=absensi-harian
+RewriteRule ^rekap-harian/([0-9]+)$ index.php?page=rekap-harian&id=$1
+
+#rekapabsen
+
+RewriteRule ^rekap-absensi$ index.php?page=rekap-absensi
+RewriteRule ^absensi-kelas/([0-9]+)$ index.php?page=absensi-kelas&id=$1
+RewriteRule ^absensi-mata-pelajaran/([0-9]+)$ index.php?page=absensi-mata-pelajaran&id=$1
+
+#pengumuman
+
+RewriteRule ^pengumuman$ index.php?page=pengumuman
+
+#pengaturan
+
+RewriteRule ^pesan$ index.php?page=pesan
+RewriteRule ^delete-pesan/(.*)$ index.php?page=delete-pesan&id=$1
+RewriteRule ^pengaturan$ index.php?page=pengaturan
+RewriteRule ^edit-admin/([0-9]+)$ index.php?page=edit-admin&id=$1
+RewriteRule ^delete-admin/([0-9]+)$ index.php?page=delete-admin&id=$1
+RewriteRule ^proses-tambah-admin$ index.php?page=tambah-admin
+RewriteRule ^proses-edit-sekolah$ index.php?page=edit-sekolah
+
+#import
+
+RewriteRule ^import-deskripsi$ index.php?page=import-deskripsi
+RewriteRule ^import-siswa$ index.php?page=import-siswa
+RewriteRule ^import-guru$ index.php?page=import-guru
+RewriteRule ^import-mapel$ index.php?page=import-mapel
+RewriteRule ^import-kelas$ index.php?page=import-kelas
+RewriteRule ^import-kkm$ index.php?page=import-kkm
+RewriteRule ^download/file/(.*)$ download.php?file=$1 [L]

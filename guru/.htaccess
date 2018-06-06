@@ -1,0 +1,58 @@
+Options -Indexes
+
+ErrorDocument 404 /siakad/templates/error404.php
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+RewriteEngine On
+RewriteRule ^dashboard$ index.php
+RewriteRule ^login$ login.php
+RewriteRule ^logout$ logout.php
+
+RewriteRule ^data-jadwal$ index.php?page=data-jadwal
+RewriteRule ^data-siswa$ index.php?page=data-siswa
+RewriteRule ^data-kelas$ index.php?page=data-kelas
+RewriteRule ^detail-kelas/([0-9]+)$ index.php?page=detail-kelas&id=$1
+RewriteRule ^data-kehadiran$ index.php?page=data-kehadiran
+RewriteRule ^detail-siswa/([0-9]+)$ index.php?page=detail-siswa&id=$1
+
+RewriteRule ^print/(.*)$ download.php?id=$1 [L]
+RewriteRule ^preview/(.*)$ rev.php?id=$1 [L]
+
+RewriteRule ^lost-pass$ lost-pass.php
+RewriteRule ^hubungi-admin$ index.php?page=hubungi-admin
+RewriteRule ^pengaturan$ index.php?page=pengaturan
+RewriteRule ^upload$ index.php?page=upload
+RewriteRule ^act$ index.php?page=act
+
+RewriteRule ^nilai-rapot$ index.php?page=nilai-rapot
+RewriteRule ^input-nilai-rapot$ input-rapot.php
+RewriteRule ^input-data-rapot$ index.php?page=data-rapot
+RewriteRule ^input-data/(.*)$ index.php?page=input-data&id=$1 [L]
+
+RewriteRule ^lihat-nilai$ index.php?page=lihat-nilai
+RewriteRule ^hasil-nilai$ index.php?page=hasil-nilai
+RewriteRule ^opsi-entry$ index.php?page=opsi-entry-nilai
+RewriteRule ^entry-nilai$ index.php?page=entry-nilai
+RewriteRule ^entry-nilai-rapot$ index.php?page=entry-nilai-rapot
+RewriteRule ^entry-nilai-kelas-([0-9])$ index.php?page=entry-nilai-kelas&id=$1
+
+RewriteRule ^input-sikap$ index.php?page=input-sikap
+RewriteRule ^input-absensi$ index.php?page=input-absensi
+RewriteRule ^input-prestasi$ index.php?page=input-prestasi
+RewriteRule ^input-prakerin$ index.php?page=input-prakerin
+RewriteRule ^input-ekskul$ index.php?page=input-ekskul
+
+RewriteRule ^input-pep$ index.php?page=input-pep
+RewriteRule ^entry-pep/(.*)$ index.php?page=entry-pep&id=$1
+
+RewriteRule ^export-siswa-pdf$ export-siswa.php
+RewriteRule ^export-kelas-pdf$ export-kelas.php
+RewriteRule ^export-kelas/kelas/(.*)$ export-per-kelas.php?kelas=$1 [L]
+RewriteRule ^export-siswa-excel$ excel-siswa.php
+RewriteRule ^export-legger$ excel-legger.php
+RewriteRule ^download-legger$ legger.php
